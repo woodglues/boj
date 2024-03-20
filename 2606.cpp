@@ -15,12 +15,15 @@ int main()
         a[t1][t2]=1;
         a[t2][t1]=1;
     }
-    v[1]=1;
+    
     std::vector<int> vec;
     vec.push_back(1);
+    v[1]=1;
+    
     while(!vec.empty()){
         int x1=vec.back();
         vec.pop_back();
+        
         for(int i=1;i<=n;++i){
             if(a[x1][i]==1&&v[i]==0){
                 vec.push_back(i);
@@ -29,5 +32,7 @@ int main()
             }
         }
     }
+    
     std::cout<<ans;
+    return 0;
 } 
