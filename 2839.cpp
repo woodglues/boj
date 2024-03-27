@@ -19,10 +19,10 @@
     a[12]=4;
     a[13]=3;
     
-    for(int i=14;i<=n;++i){
+ for(int i=14;i<=n;++i){
         만약 (a[i-5]>=1){
             a[i]=a[i-5]+1;
-        }else if(a[i-3]>=1){
+ }else if(a[i-3]>=1){
             a[i]=a[i-3]+1;
         }else{
             a[i]=-1;
