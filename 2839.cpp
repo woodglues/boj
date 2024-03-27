@@ -1,32 +1,28 @@
-#include <아이오스트림>
+#include <iostream>
 
-주 ()
+int a[8192]={0};
+int main()
 {
-    intn;
-    int a[8192]={0};
+    int n;
+
     std::cin>>n;
-    a[1]=-1;
-    a[2]=-1;
-    a[3]=1;
-    a[4]=-1;
-    a[5]=1;
-    a[6]=2;
-    a[7]=-1;
-    a[8]=2;
-    a[9]=3;
-    a[10]=2;
-    a[11]=3;
-    a[12]=4;
-    a[13]=3;
     
- for(int i=14;i<=n;++i){
-        만약 (a[i-5]>=1){
+    a[3]=1;
+    a[5]=1;
+    
+    for(int i=6;i<=n;++i){
+        if(a[i-5]>=1){
             a[i]=a[i-5]+1;
- }else if(a[i-3]>=1){
+        }else if(a[i-3]>=1){
             a[i]=a[i-3]+1;
-        }else{
-            a[i]=-1;
         }
     }
-    std::cout<<a[n];
+    
+    if(a[n]==0){
+        std::cout<<-1;
+    }else{
+        std::cout<<a[n];
+    }
+    
+    return 0;
 }
