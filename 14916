@@ -4,6 +4,10 @@ int m[131072]={0};
 
 int dp(int k)
 {
+    if(m[k]!=0){
+        return m[k];
+    }
+
     if(k==1){
         return -1;
     }
