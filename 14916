@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main()
+{
+    int n;
+    int a[131072]={0};
+
+    a[1]=-1;
+    a[2]=1;
+    a[3]=-1;
+    a[4]=2;
+    a[5]=1;
+    a[6]=3;
+    a[7]=2;
+    a[8]=4;
+    a[9]=3;
+    a[10]=2;
+
+    std::cin>>n;
+    
+    if(10<n){
+        for(int i=11;i<=n;++i){
+            a[i]=a[i-5]+1;
+        }
+    }
+    std::cout<<a[n];
+}
