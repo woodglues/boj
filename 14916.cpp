@@ -1,36 +1,11 @@
 #include <iostream>
 
-int m[131072]={0};
+int m[131072]={0, -1, 1, -1, 2, 1, 3, 2, 4};
 
 int dp(int k)
 {
     if(m[k]!=0){
         return m[k];
-    }
-
-    if(k==1){
-        return -1;
-    }
-    if(k==2){
-        return 1;
-    }
-    if(k==3){
-        return -1;
-    }
-    if(k==4){
-        return 2;
-    }
-    if(k==5){
-        return 1;
-    }
-    if(k==6){
-        return 3;
-    }
-    if(k==7){
-        return 2;
-    }
-    if(k==8){
-        return 4;
     }
     
     m[k]=dp(k-5)+1;
@@ -40,8 +15,9 @@ int dp(int k)
 int main()
 {
     int n;
-    
 
     std::cin>>n;
     std::cout<<dp(n);
+    
+    return 0;
 }
